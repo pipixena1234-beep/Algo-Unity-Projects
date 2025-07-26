@@ -182,7 +182,7 @@ footer a {
   font-weight: bold;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
