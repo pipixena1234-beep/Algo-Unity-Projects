@@ -237,30 +237,24 @@ kbd {
   color: #333;
 }
 
-.tab-buttons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.tab-btn {
-  padding: 10px 20px;
-  border: none;
-  background-color: #ccc;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.tab-btn.active {
-  background-color: #007BFF;
-  color: white;
-}
-
 .tab-content {
   display: none;
 }
 
-.tab-content.active {
+#tab-3d:target,
+#tab-2d:target {
   display: block;
 }
 
+.tab-link {
+  padding: 10px 20px;
+  display: inline-block;
+  background: #ccc;
+  text-decoration: none;
+}
+
+.tab-link:focus,
+.tab-link:hover {
+  background: #007BFF;
+  color: white;
+}
