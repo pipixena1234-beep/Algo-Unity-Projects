@@ -265,6 +265,14 @@ kbd {
 .tab-content {
   display: none;
   margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+
+  /* NEW: Arrange projects left to right */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 #tab1:checked ~ #content1,
