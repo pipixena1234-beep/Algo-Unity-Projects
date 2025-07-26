@@ -237,24 +237,48 @@ kbd {
   color: #333;
 }
 
-.tab-content {
-  display: none;
-}
-
-#tab-3d:target,
-#tab-2d:target {
-  display: block;
+/* Basic styling */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 10px;
 }
 
 .tab-link {
   padding: 10px 20px;
-  display: inline-block;
-  background: #ccc;
+  background-color: #ccc;
+  color: black;
   text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-.tab-link:focus,
-.tab-link:hover {
-  background: #007BFF;
+.tab-link:hover,
+.tab-link:focus {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Hide all tabs by default */
+.tab-content {
+  display: none;
+}
+
+/* Show tab when targeted in URL */
+#tab-2d:target,
+#tab-3d:target {
+  display: block;
+}
+
+/* Optional: show 3D tab by default if no # in URL */
+main:not(:has(:target)) #tab-3d {
+  display: block;
+}
+
+/* Optional: active tab button (CSS-only simulation, not perfect) */
+.tab-link:target,
+.tab-link:focus {
+  background-color: #007BFF;
   color: white;
 }
