@@ -283,3 +283,24 @@ main:not(:has(:target)) #tab-3d {
   color: white;
 }
 
+ ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      font-size: 1.1em;
+      opacity: 0;
+      animation: fadeInBold 1s forwards;
+    }
+    li:nth-child(1) { animation-delay: 0s; }
+    li:nth-child(2) { animation-delay: 1s; }
+    li:nth-child(3) { animation-delay: 2s; }
+    li:nth-child(4) { animation-delay: 3s; }
+    li:nth-child(5) { animation-delay: 4s; }
+
+    @keyframes fadeInBold {
+      0% { opacity: 0; font-weight: normal; }
+      50% { opacity: 0.5; font-weight: 500; }
+      100% { opacity: 1; font-weight: bold; }
+    }
+
