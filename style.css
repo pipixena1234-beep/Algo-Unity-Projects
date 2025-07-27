@@ -279,7 +279,7 @@ main:not(:has(:target)) #tab-3d {
 /* Optional: active tab button (CSS-only simulation, not perfect) */
 .tab-link:target,
 .tab-link:focus {
-  background-color: #007BFF;
+  background-color: #6d4e31;
   color: white;
 }
 
