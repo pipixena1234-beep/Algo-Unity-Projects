@@ -302,4 +302,42 @@ main:not(:has(:target)) #tab-3d {
       50% { opacity: 0.5; font-weight: 500; }
       100% { opacity: 1; font-weight: bold; }
     }
+/* Make images scale down */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Allow flex items to wrap */
+.intro, .subjects, .projects {
+  flex-wrap: wrap;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  /* Stack nav links below logo */
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Intro section images smaller */
+  .intro img {
+    width: 100px;
+    margin: 10px;
+  }
+
+  /* Subjects and Projects stack vertically */
+  .subject, .project {
+    width: 100%;
+    max-width: 400px; /* so it doesn’t stretch too wide */
+  }
+}
 
