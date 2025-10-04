@@ -315,23 +315,36 @@ img {
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
-  /* Stack nav links below logo */
   nav {
-    flex-direction: column;
+    flex-direction: row;          /* keep in one line */
+    justify-content: space-between; /* logo left, links right */
     align-items: center;
   }
 
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+  nav .logo {
+    height: 35px;                 /* smaller logo for mobile */
   }
 
-  /* Intro section images smaller */
+  .nav-links {
+    flex-direction: row;          /* keep links in a row */
+    gap: 10px;
+    flex-wrap: wrap;              /* wrap if screen too tight */
+  }
+
+  .nav-links a {
+    font-size: 14px;              /* slightly smaller text */
+    margin: 0 5px;
+  }
+
+  /* Intro images */
+  .intro {
+    flex-wrap: nowrap;            /* force one row */
+    gap: 10px;
+  }
+
   .intro img {
-    width: 100px;
-    margin: 10px;
+    width: 80px;                  /* smaller on mobile */
+    margin: 0;
   }
 
   /* Subjects and Projects stack vertically */
